@@ -17,7 +17,9 @@ var app = express();
 var PORT = process.env.PORT || 8080;
 
 //Mongo Config
-mongoose.connect('mongodb://localhost/finalproj')
+mongoose.connect(process.env.MONGOLAB_URI ||
+    process.env.MONGOHQ_URL ||'mongodb://localhost/finalproj')
+    
 var db = mongoose.connection;
 
 db.on("error", function(err) {
