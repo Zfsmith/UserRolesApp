@@ -17,7 +17,7 @@ var app = express();
 var PORT = process.env.PORT || 8080;
 
 //Mongo Config
-mongoose.connect(mongodb://heroku_095r70s9:leii606v1netre1h7amopnd4st@ds161001.mlab.com:61001/heroku_095r70s9);
+mongoose.connect("mongodb://heroku_095r70s9:leii606v1netre1h7amopnd4st@ds161001.mlab.com:61001/heroku_095r70s9");
 
 var db = mongoose.connection;
 
